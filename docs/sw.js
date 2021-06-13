@@ -1,7 +1,7 @@
 // キャッシュファイルの指定
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-    '/poster-keisuke.github.io/',
+    '/tyamane.github.io/pwa2/',
 ];
 
 // インストール処理
@@ -24,4 +24,8 @@ self.addEventListener('fetch', function(event) {
                 return response ? response : fetch(event.request);
             })
     );
+});
+
+self.addEventListener('activate', function (event) {
+    // skip
 });
